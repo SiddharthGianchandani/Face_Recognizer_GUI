@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Who Thiz?</title>
+<style>
+h1{
+text-align:center;
+font-family:cursive;
+}
+body{
+background-color:black;
+}
+p{
+text-align:center;
+}
+.button{
+font-size:15px;
+border=black;
+background-color:darkblue;
+right:50%;
+color:white;
+border-color:darkblue;
+box-shadow: none;
+}
+.button:hover{
+background-color:white;
+color:black;
+border-color:darkblue;
+}
+#later1{ 
+color:yellow;
+}
+.message{
+display:none;
+align-items: center;
+justify-content: center;
+}
+</style>
+<script>
+function redir(){
+document.getElementById('redirector').style.display='none';
+document.getElementById('later1').style.display='flex';
+window.location.href="/train";
+}
+</script>
+</head>
+<body >
+<br><br>
+<p align="center">
+<img src="static/images/training.jpeg" alt="There is some problem with your webcam" width="600" height="450">
+<br><br>
+<input type="button" class="button" value="Click me to start training" onclick="redir()" id="redirector">
+</p>
+
+<div id="later1" class="message">Please wait.When training is completed you will be redirected back to the homepage.</div>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Who Thiz?</title>
+<style>
+h1{
+text-align:center;
+font-family:cursive;
+}
+body{
+background-color:black;
+}
+.mod{
+text-align:center;
+align:center;
+width:350px;
+height:190px;
+background-color:white;
+margin-left:55%;
+margin-top:-25%;
+}
+.images{
+margin-left:2%;
+}
+</style>
+</head>
+<body>
+<br>
+<div>
+<img src="static/images/wrong.jpeg" width="500" height="437" class="images">
+</div>
+<div class="mod"> 
+	<br>
+	Help us improve.<br>
+	Please state the name of this person.
+	<br><br>
+	{%block content%}
+	<form method="POST">
+	{%csrf_token%}
+	{{form}}
+	<br><br>
+	<input type="submit" class="button" value="Ok">
+	</form>
+	{%endblock%}
+	<br>
+	<input type="button" value="Cancel" onclick="window.location.href='/'">
+</div>
+
+</body>
+</html>
